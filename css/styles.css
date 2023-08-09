@@ -1,0 +1,610 @@
+@import url('https://fonts.googleapis.com/css2?family=Bilbo+Swash+Caps&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+  background-color: black;
+}
+
+/* #region Slides */
+
+.slide {
+  width: 100vw;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.forside {
+  background: black;
+}
+
+.galleri {
+  background: black;
+  display: flex;
+}
+
+.vaerker {
+  background: black;
+  display: flex;
+  justify-content: center;
+}
+
+.omPeter {
+  background: black;
+  margin: auto 0;
+}
+
+.lotrvaerk{
+  background: black;
+  display: flex;
+  height: 90vh;
+}
+
+.hobbitvaerk{
+  background: black;
+  display: flex;
+  height: 90vh;
+}
+
+/* #endregion */
+
+/* #region Navigation */
+
+.indexNav{
+  background-color: black;
+  color: #c5a029;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 999999;
+  transition: ease-in-out 0.2s;
+}
+
+.vaerkerNav{
+  background-color: black;
+  color: #c5a029;
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  width: 100vw;
+  z-index: 999999;
+  transition: ease-in-out 0.2s;
+}
+
+nav .mainMenu{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+nav .mainMenu li a{
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #c5a029;
+  font-size: 100%;
+}
+
+nav .mainMenu li a:hover{
+  background-color:#c5a029;
+  color: black;
+  border-radius: 20px;
+}
+
+nav .openMenu{
+  font-size: 2rem;
+  margin: 20px;
+  display: none;
+  cursor: pointer;
+}
+
+nav .mainMenu .closeMenu, .icons i{
+  font-size: 3rem;
+  display: none;
+  cursor: pointer;
+}
+
+.fa-facebook-square{color: #4267B2;}
+.fa-youtube-square{color:	#FF0000}
+.fa-imdb{color: #f3ce13;}
+
+.fa-facebook-square:hover,
+.fa-youtube-square:hover,
+.fa-imdb:hover{color: #fff;}
+
+nav img{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 15px;
+  top: 15px;
+  cursor: pointer;
+  animation: rotate 5s infinite linear;
+}
+
+@keyframes rotate{
+  from{ transform: rotate(360deg); }
+  to{ transform: rotate(-360deg); }
+}
+
+@media(max-width: 768px){
+  .indexNav .mainMenu{
+    height: 100vh;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    transition: top 1s ease;
+    display: none;
+  }
+  .indexNav .mainMenu .closeMenu{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .indexNav .openMenu{
+    display: block;
+  }
+  .indexNav .mainMenu li a:hover{
+    background: none;
+    color: #fff;
+    font-size: 1.6rem;
+  }
+  .icons i{
+    display: inline-block;
+    padding: 12px;
+  }
+} 
+
+@media(max-width: 768px){
+  .vaerkerNav .mainMenu{
+    height: 100vh;
+    position: fixed;
+    margin: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99999;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    transition: top 1s ease;
+    display: none;
+  }
+  .vaerkerNav .mainMenu .closeMenu{
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .vaerkerNav .openMenu{
+    display: block;
+  }
+  .vaerkerNav .mainMenu li a:hover{
+    background: none;
+    color: #fff;
+    font-size: 1.6rem;
+  }
+  .icons i{
+    display: inline-block;
+    padding: 12px;
+  }
+} 
+
+/* #endregion */
+
+/* #region Hero */
+
+.hero-container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+} 
+
+.hero-container .hero-txt{
+  line-height: 1;
+  z-index: 2830;
+  color: #c5a029;
+  font-size: 15vw;
+  padding: 10%;
+  font-family: 'Bilbo Swash Caps', cursive;
+  -webkit-text-stroke: 1px black;
+}
+
+.PJimgPNG {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(-1);
+  max-width: 40%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+.forside{
+  background-image: none;
+  background-color: black;
+}
+.hero-container .hero-txt{
+  top: 20%;
+  position: absolute;
+  z-index: 2830;
+  font-size: 30vw;
+  line-height: 1;
+  padding: 0;
+}
+.PJimgPNG {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transform: scaleX(-1);
+  max-width: 80%;
+  height: auto;
+}
+}
+@media(max-width:768px){
+  .hero-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+
+/* #endregion */
+
+/* #region Galleri */
+
+.galleriGrid {
+  max-width: 90vw;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 33.333%);
+  gap: 2vw;
+  margin: auto auto;
+  align-content: center;
+  grid-template-areas:
+    "a a b c d d d"
+    "a a e e d d d"
+    "f f e e d d d";
+}
+
+@media (max-width: 768px) {
+  .galleriGrid {
+    max-width: 70vw;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "a a a"
+      "b c d"
+      "e e d"
+      "f f d"
+      ". . .";
+  }
+  
+}
+
+@media (max-width: 400px){
+  .galleriGrid{
+    max-width: 90vw;
+  }
+}
+.galleri img:nth-child(1) { grid-area: a; transition: all 0.5s ease; }
+.galleri img:nth-child(2) { grid-area: f; transition: all 0.5s ease; }
+.galleri img:nth-child(3) { grid-area: b; transition: all 0.5s ease; }
+.galleri img:nth-child(4) { grid-area: c; transition: all 0.5s ease; }
+.galleri img:nth-child(5) { grid-area: e; transition: all 0.5s ease; }
+.galleri img:nth-child(6) { grid-area: d; transition: all 0.5s ease; }
+.galleri img:nth-child(1):hover { transform: scale(1.2); }
+.galleri img:nth-child(2):hover { transform: scale(1.2); }
+.galleri img:nth-child(3):hover { transform: scale(1.45); }
+.galleri img:nth-child(4):hover { transform: scale(1.45); }
+.galleri img:nth-child(5):hover { transform: scale(1.2); }
+.galleri img:nth-child(6):hover { transform: scale(1.15); }
+
+.galleriGrid img {
+  width: 50%;
+  height: 100%;
+  object-fit: cover;
+  border: #c5a029 2px solid;
+}
+
+@keyframes scale {
+  from {
+    scale: 1;
+  }
+  to {
+    scale: 1.2;
+  }
+}
+
+/* #endregion */
+
+/* #region Værker */
+
+.vaerkerGrid {
+  max-width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(2, 0.7fr);
+  grid-template-rows: 66.666%;
+  margin: auto auto;
+  align-content: center;
+  gap: 10vw;
+}
+
+.hobbit2{
+  display: none;
+}
+
+@media (max-width: 768px){
+  .vaerkerGrid{
+    margin: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 50vw;
+  }
+  .hobbit2{
+    display: block;
+  }
+  .hobbit1{
+    display: none;
+  }
+}
+
+@media (max-width: 400px){
+  .vaerkerGrid{
+    max-width: 90vw;
+    margin: auto auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.vaerkerText{
+  margin: 0 auto;
+  position: absolute;
+  
+}
+
+.vaerker div p{
+  font-size: clamp(1rem, 0.034rem + 2.576vw, 3.125rem);
+  color: #c5a029;
+}
+
+.vaerkerGrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: #c5a029 2px solid;
+}
+
+
+/* #endregion */
+
+/* #region Om Peter Jackson */
+
+.omPeter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.omPeter .omContent img{
+  height: auto;
+  border: 2px solid #c5a029;
+  max-width: 25vw;
+}
+
+.omText{
+  max-width: 550px;
+  padding: 0 10px;
+}
+
+.omContent{
+  width: 1280px;
+  max-width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.omText h1{
+  color: #c5a029;
+  font-size: 4rem;
+  margin: 0;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.omText p{
+  color: white;
+  font-size: 1rem;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 0;
+}
+
+.omText a{
+  font-size: 40px;
+}
+
+@media screen and (max-width: 1180px){
+  .omPeter{
+    width: 100%;
+    height: auto;
+    padding: 70px 0px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .omPeter .omContent img{
+    margin-bottom: 35px;
+  }
+  .omText h1{
+    font-size: 50px;
+    margin-bottom: 25px;
+  }
+}
+
+/* #endregion */
+
+/* #region Lord Of The Rings */
+
+.lotrGrid{
+  max-width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 33.333%);
+  margin: auto auto;
+  align-content: center;
+  grid-template-areas:
+    "a a a b c c c"
+    "a a a b c c c"
+    "a a a b e e e";
+}
+
+@media (max-width: 1000px) {
+  .lotrGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    margin: auto auto;
+    grid-template-areas:
+      "c c c"
+      "c c c"
+      "a a a"
+      "a a a"
+      "a a a"
+      "e e e";
+  }
+  .lotrGrid img:nth-child(1) {
+    max-width: 70vw;
+    
+  }
+  .lotrGrid img:nth-child(2) {
+    max-width: 70vw;
+  }
+}
+
+.lotrGrid img:nth-child(1) { grid-area: a; }
+.lotrGrid a { grid-area: e; }
+
+.lotr-text-container{
+  grid-area: c;
+  color: #c5a029;
+}
+
+.lotrGrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: #c5a029 2px solid;
+}
+
+/* #endregion */
+
+/* #region Hobitten */
+
+.hobbitGrid{
+  max-width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(3, 33.333%);
+  margin: auto auto;
+  align-content: center;
+  grid-template-areas:
+    "c c c b a a a"
+    "c c c b a a a"
+    "e e e b a a a";
+}
+
+@media (max-width: 1000px) {
+  .hobbitGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(6, auto);
+    margin: auto auto;
+    grid-template-areas:
+      "c c c"
+      "c c c"
+      "a a a"
+      "a a a"
+      "a a a"
+      "e e e";
+  }
+  .hobbitGrid img:nth-child(1) {
+    max-width: 70vw;
+  }
+  .hobbitGrid img:nth-child(2) {
+    max-width: 70vw;
+  }
+}
+.hobbitGrid img:nth-child(1) { grid-area: a; }
+.hobbitGrid a{ grid-area: e; }
+
+.hobbit-text-container{
+  grid-area: c;
+  color: #c5a029;
+}
+
+.hobbitGrid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border: #c5a029 2px solid;
+}
+
+.hobbitvaerk .fa{
+  color: white;
+  grid-area: e;
+  z-index: 999999;
+  font-size: 20px;
+  justify-self: center;
+}
+
+/* #endregion */
+
+/* #region Footer */
+
+footer {
+  z-index: 999;
+  color: #c5a029;
+ 
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* #endregion */
